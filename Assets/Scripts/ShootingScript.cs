@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class ShootingScript : MonoBehaviour
 {
+    //the key the player needs to press for shooting
+    //public KeyCode shootKey;
+    public string shootButton;
 
     //the projectile that we'll be shooting
     public Transform projectile; 
@@ -16,7 +19,10 @@ public class ShootingScript : MonoBehaviour
     {
         //if the cooldown has reached the rate
         fireCooldown += Time.deltaTime;
-        if (fireCooldown >= fireRate)
+        if (fireCooldown >= fireRate
+            //&& Input.GetButton(shootButton))
+            && Input.GetButtonDown(shootButton))
+            //&& Input.GetButtonUp(shootButton))
         {
             //shoot
             Shoot();

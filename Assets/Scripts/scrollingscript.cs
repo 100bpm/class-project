@@ -21,6 +21,9 @@ public class scrollingscript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+
+
         /*the delta time is added to the timePassed variable to keep track of 
          time passed since a switch */
         timePassed += Time.deltaTime;
