@@ -20,8 +20,12 @@ public class ShootingScript : MonoBehaviour
         //if the cooldown has reached the rate
         fireCooldown += Time.deltaTime;
         if (fireCooldown >= fireRate
-            //&& Input.GetButton(shootButton))
+            //if the game is not paused
+            && PauseMenuScript.isPaused == false
+            //&& !PauseMenuScript.isPaused
+            //if the player is pressing the shoot button
             && Input.GetButtonDown(shootButton))
+            //&& Input.GetButton(shootButton))
             //&& Input.GetButtonUp(shootButton))
         {
             //shoot
