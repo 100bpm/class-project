@@ -106,6 +106,7 @@ GameObject:
   - component: {fileID: 1541941984232970970}
   - component: {fileID: 8108668492487331714}
   - component: {fileID: 5773095649549504962}
+  - component: {fileID: 4938537045560725116}
   m_Layer: 0
   m_Name: ringPrefab
   m_TagString: Untagged
@@ -155,6 +156,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efb7c784bfd37ad48914ed3ce07c6c79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerTag: Player
+  ringExplosion: {fileID: 4951358271794114391, guid: a3da942b5372bff4faafc494a4bd2950, type: 3}
+  ringMesh: {fileID: 609541908598379912}
+  ringCollider: {fileID: 5773095649549504962}
+  ringSoundPlayer: {fileID: 4938537045560725116}
+  scoreSound: {fileID: 8300000, guid: ec88845e86b1a384584cd82964cfd0c6, type: 3}
 --- !u!65 &5773095649549504962
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -176,6 +183,102 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 8, y: 8, z: 0.1}
   m_Center: {x: 0, y: 0, z: 0.2}
+--- !u!82 &4938537045560725116
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9009275263149408836}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &339158599634086105
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -190,7 +293,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: de02c5822cc63994f839e56d02e6ae96, type: 3}
       propertyPath: m_LocalScale.y
-      value: 495.2565
+      value: 482.8751
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: de02c5822cc63994f839e56d02e6ae96, type: 3}
       propertyPath: m_LocalPosition.x
@@ -255,5 +358,10 @@ PrefabInstance:
 --- !u!4 &233720499996725042 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: de02c5822cc63994f839e56d02e6ae96, type: 3}
+  m_PrefabInstance: {fileID: 339158599634086105}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &609541908598379912 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: de02c5822cc63994f839e56d02e6ae96, type: 3}
   m_PrefabInstance: {fileID: 339158599634086105}
   m_PrefabAsset: {fileID: 0}
