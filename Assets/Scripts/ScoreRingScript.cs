@@ -39,12 +39,26 @@ public class ScoreRingScript : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //we display the name of the object we collided with 
-        Debug.Log("Colided with object " + other.gameObject.name);
+        //Debug.Log("Colided with object " + other.gameObject.name);
 
 
         //if the other objet has the scoring tag, this object is destroyed
         if (other.CompareTag(playerTag)) 
         {
+
+            //go to the game object of the collider this object collided with
+            //try to get the component shipnaimation from it
+            //if it has it, put it in the anim shipanimation variable, if it doesnt
+            //we skip the rest of the if statment
+            if (other.gameObject.TryGetComponent<shipanimaiton>(out shipanimaiton anim)) 
+            {
+
+                Debug.Log(other.gameObject.name);
+                anim.Spin();  
+            
+            }
+
+            //add 10 points to scor manager which will display the new score
             ScoreManager.Instance.AddScore(10);
 
             //spawn a ring explosion at the positon of this object, with its same rotation
